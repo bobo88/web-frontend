@@ -2,3 +2,12 @@
 1. 涉及到前端的方方面面，会不断完善补充
 2. 亦会涉及部分后端开发语言，比如Java/PHP等
 3. 暂时就这样......
+
+### 一、版块区分
+1. [常见技术点](https://github.com/bobo88/web-front/tree/main/%E5%B8%B8%E8%A7%81%E6%8A%80%E6%9C%AF%E7%82%B9)
+2. [技术思维导图](https://github.com/bobo88/web-front/tree/main/%E6%8A%80%E6%9C%AF%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE)
+3. [设计模式](https://github.com/bobo88/web-front/tree/main/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
+4. [ES6](https://github.com/bobo88/web-front/tree/main/ES6)
+5. [HTML & CSS](https://github.com/bobo88/web-front/tree/main/HTML%20%26%20CSS)
+6. [React](https://github.com/bobo88/web-front/tree/main/react)
+7. [Vue](https://github.com/bobo88/web-front/tree/main/vue)
