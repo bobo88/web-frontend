@@ -2,6 +2,7 @@
 
 ### 一、基础知识
 * [vue基础 -- 组件]()
+* [vue基础 -- 组件之间的传值]()
 * [vue基础 -- 插件]()
 * [vue基础 -- vuex中getter]()
 * [vue基础 -- vuex中getter]()
