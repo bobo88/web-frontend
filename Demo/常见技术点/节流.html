@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>节流</title>
+</head>
+<body>
+
+  <!-- 节流 -->
+  <button id="button">点击我</button>
+  <p>随机数：<span id="js-random"></span></p>
+  
+  <script>
+    // // 节流
+    // function throttling(fn, wait) {
+    //   var timer
+    //   return function () {
+    //     clearTimeout(timer)
+    //     timer = setTimeout(function(){
+    //       fn()
+    //     }, wait)
+    //   }
+    // }
+    // function randomFun() {
+    //   console.log(Math.random())
+    // }
+    // var throttlingFun = throttling(randomFun, 1000)
+    // document.getElementById('button').onclick = function() {
+    //   throttlingFun()
+    // }
+
+    // 节流
+    function throttling2(func, wait) {
+      var timer
+      return function() {
+        if (!timer) {
+          timer = setTimeout(function(){
+            func()
+            timer = null
+          }, wait)
+        }
+      }
+    }
+    function handle() {
+      document.getElementById('js-random').innerHTML = Math.random()
+      // console.log(Math.random())
+    }
+    document.getElementById('button').onclick = throttling2(handle, 1000)
+  </script>
+</body>
+</html>

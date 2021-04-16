@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BFC</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: #069;
+      overflow: hidden;
+    }
+    .box-inner {
+      margin-top: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: #f60;
+    }
+    .box-2 {
+      width: 300px;
+      height: 300px;
+      background-color: #069;
+    }
+    .box-inner-2 {
+      float: left;
+      width: 50px;
+      height: 50px;
+      background-color: #f60;
+    }
+    .box-inner-last {
+      width: 150px;
+      height: 150px;
+      background-color: #bfc;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div style="padding: 20px;">
+    <h2>BFC: 
+      块级格式化上下文，它是指一个独立的块级渲染区域，只有Block-level box参与，
+      该区域拥有一套渲染规则来约束块级盒子的布局，且与区域外部无关。
+    </h2>
+
+    <h4>
+      如何创建BFC
+    </h4>
+    <p>
+      方法一： float的值不是none<br/>
+      方法二： position的值不是static或者relative<br/>
+      方法三： display的值是inline-block、flex或者inline-flex <br/>
+      方法四： overflow：hidden;
+    </p>
+
+    <h4>
+      BFC的作用
+    </h4>
+    <p>
+      1、BFC可以取消盒子margin塌陷<br/>
+      2、BFC可以阻止元素被浮动元素覆盖
+    </p>
+
+    <h4>DEMO: 取消盒子margin塌陷</h4>
+    <div class="box">
+      <p class="box-inner"></p>
+    </div>
+
+    <h4>DEMO: 阻止元素被浮动元素覆盖</h4>
+    <div class="box-2">
+      <p class="box-inner-2"></p>
+      <p class="box-inner-2"></p>
+      <p class="box-inner-last"></p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

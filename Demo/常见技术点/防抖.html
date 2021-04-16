@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>防抖</title>
+</head>
+<body>
+
+  <!-- 防抖 -->
+  <input type="text" id="input">
+  
+  <script>
+    // // 防抖函数
+    // function bounce(delay) {
+    //   var timer
+    //   return function (value) {
+    //     clearTimeout(timer)
+    //     timer = setTimeout(function(){
+    //       console.log(value)
+    //     }, delay)
+    //   }
+    // }
+    // var inputItem = document.getElementById('input')
+    // var bounceFun = bounce(1000)
+    // inputItem.addEventListener('keyup', function(e){
+    //   bounceFun(e.target.value)
+    // })
+
+
+    // 防抖函数
+    function bounce(delay, cb) {
+      var timer
+      return function (value) {
+        clearTimeout(timer)
+        timer = setTimeout(function(){
+          cb(value)
+        }, delay)
+      }
+    }
+    function fn(value) {
+      console.log(value)
+    }
+    var inputItem = document.getElementById('input')
+    var bounceFun = bounce(1000, fn)
+    inputItem.addEventListener('keyup', function(e){
+      bounceFun(e.target.value)
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <script src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- 引入组件库 -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+  <!-- js -->
+  <script src="./demo-input.js"></script>
+  <style>
+    .curr {
+      background: #069;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app">
+    <!-- <el-input class="sssss" v-history="{set:this,name:'queryModel.sysNo'}" v-model="queryModel.sysNo" @blur="blur()"></el-input> -->
+    <!-- <el-input v-history="{set:this,name:'queryModel.sysbb'}" v-model="queryModel.sysbb"></el-input> -->
+    <!-- <el-button @click="save(xxx)">保存</el-button> -->
+  </div>
+  
+  <!-- 防抖 -->
+  <!-- <input type="text" id="input"> -->
+  
+  <!-- 节流 -->
+  <button id="button">点击我</button>
+  <script>
+    var app = new Vue({
+      // el: '#app',
+      // data: {
+      //   xxx: '',
+      //   queryModel:{
+      //     // sysNo:'',
+      //     // sysbb: ''
+      //   }
+      // },
+      // methods: {
+      //   blur(){
+      //     console.log('is blur function:', this.queryModel.sysNo);
+      //     console.log('我还是会执行。。。。')
+      //   },
+      //   save(val){
+      //     console.log('save:', this.queryModel.sysNo);
+      //   }
+      // },
+    })
+  </script>
+
+  <script>
+    // // 防抖函数
+    // function bounce(delay) {
+    //   var timer
+    //   return function (value) {
+    //     clearTimeout(timer)
+    //     timer = setTimeout(function(){
+    //       console.log(value)
+    //     }, delay)
+    //   }
+    // }
+    // var inputItem = document.getElementById('input')
+    // var bounceFun = bounce(1000)
+    // inputItem.addEventListener('keyup', function(e){
+    //   bounceFun(e.target.value)
+    // })
+
+
+    // // 防抖函数
+    // function bounce(delay, cb) {
+    //   var timer
+    //   return function (value) {
+    //     clearTimeout(timer)
+    //     timer = setTimeout(function(){
+    //       cb(value)
+    //     }, delay)
+    //   }
+    // }
+    // function fn(value) {
+    //   console.log(value)
+    // }
+    // var inputItem = document.getElementById('input')
+    // var bounceFun = bounce(1000, fn)
+    // inputItem.addEventListener('keyup', function(e){
+    //   bounceFun(e.target.value)
+    // })
+
+    // // 节流
+    // function throttling(fn, wait) {
+    //   var timer
+    //   return function () {
+    //     clearTimeout(timer)
+    //     timer = setTimeout(function(){
+    //       fn()
+    //     }, wait)
+    //   }
+    // }
+    // function randomFun() {
+    //   console.log(Math.random())
+    // }
+    // var throttlingFun = throttling(randomFun, 1000)
+    // document.getElementById('button').onclick = function() {
+    //   throttlingFun()
+    // }
+
+    // // 节流
+    // function throttling2(func, wait) {
+    //   var timer
+    //   return function() {
+    //     if (!timer) {
+    //       timer = setTimeout(function(){
+    //         func()
+    //         timer = null
+    //       }, wait)
+    //     }
+    //   }
+    // }
+    // function handle() {
+    //   console.log(Math.random())
+    // }
+    // document.getElementById('button').onclick = throttling2(handle, 1000)
+
+
+    // 作用域 AO & GO
+
+    // // 单例模式
+    // function createLogin() {
+    //   var div = document.createElement('div')
+    //   div.innerHTML = '我是登录弹窗'
+    //   div.style.display = 'none'
+    //   document.body.appendChild(div)
+    //   return div
+    // }
+    // function singleFun(fn) {
+    //   var result
+    //   return function() {
+    //     return result || (result = fn.apply(this, arguments))
+    //   }
+    // }
+    // var singleItem = singleFun(createLogin)
+    // document.getElementById('button').onclick = function() {
+    //   var tcDiv = singleItem()
+    //   tcDiv.style.display = 'block'
+    // }
+
+
+    // // ES5 构造函数
+    // function Person(name, age) {
+    //   this.name = name
+    //   this.age = age
+    // }
+    // Person.prototype.say = function() {
+    //   console.log('你好')
+    // }
+    // var person1 = new Person('BOBO', 18)
+    // console.log(person1.name)
+    // person1.say()
+
+    // // ES6构造函数
+    // class Person {
+    //   constructor(name, age) {
+    //     this.name = name
+    //     this.age = age
+    //   }
+    //   say() {
+    //     console.log('你好，我是' + this.name)
+    //   }
+    //   static getInstance(name, age) {
+    //     if (!this.instance) {
+    //       this.instance = new Person(name, age)
+    //     }
+    //     return this.instance
+    //   }
+    // }
+    // let person1 = Person.getInstance('bobo', 18)
+    // let person2 = Person.getInstance('angel', 28)
+    // console.log(person1, person2)
+    // console.log(person1 === person2)
+
+
+
+  </script>
+  
+</body>
+</html>
