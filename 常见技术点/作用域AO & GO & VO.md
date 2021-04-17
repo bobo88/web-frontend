@@ -31,7 +31,7 @@ fn(true);
 - 预解析阶段，首先创建GO全局对象，然后逐行的执行代码，碰到函数执行，则创建AO局部对象。
 
 ### 一、什么是GO(Global Object)：
-- 含义：GO是指全局作用域的全局变量对象
+- 含义：GO是指全局作用域的全局对象（window）
 - 形成时间：页面打开时
 - 销毁时间：页面关闭时
 
@@ -114,11 +114,28 @@ fn(true);
 *留个坑后面再写......*
 
 ### 三、什么是VO(Variable Object)
-- 含义：VO是变量对象
-- 形成时间：函数执行时
-- 销毁时间：函数执行完毕
+- 含义：VO是变量对象，是一个与执行上下文相关的特殊对象
+- 包含：
+    - 变量 (var, 变量声明)；
+    - 函数声明 (FunctionDeclaration, 缩写为 FD)；
+    - 函数的形参；
+- VO 与 GO/AO 的关系，如下所示：
+```js
+抽象变量对象VO (变量初始化过程的一般行为)
+  ║
+  ╠══> 全局上下文变量对象GlobalContextVO
+  ║        (VO === this === global)
+  ║
+  ╚══> 函数上下文变量对象FunctionContextVO
+           (VO === AO, 并且添加了<arguments>和<formal parameters>)
+```
 
+#### 引申
 *与通过  var 声明的有初始化值 undefined 的变量不同，通过 let/const 声明的变量直到它们的定义被执行时才初始化。在变量初始化前访问该变量会导致 ReferenceError。该变量处在一个自块顶部到初始化处理的“暂存死区”中。*
 
 *使用 let / const 声明的全局变量，会被绑定到Script对象而不是Window对象，不能以Window.xx 的形式使用；使用 var 声明的全局变量会被绑定到Window对象；使用var / let / const 声明的局部变量都会被绑定到 Local 对象。注：Script对象、Window对象、Local对象三者是平行并列关系。*
+
+*Script对象，如下图所示*
+
+![Script对象](https://github.com/bobo88/web-front/blob/main/img/AO_GO2.png)
 
