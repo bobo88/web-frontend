@@ -11,6 +11,31 @@
 
   <script>
     var x = 0
+    function fn(c) {
+        console.log(c);  // true
+        var c = false;
+        console.log(a);  // function a(){}
+        var a = 1;
+        console.log(a);  // 1
+        function a(){
+            // wo can do something
+        };
+        console.log(a);  // 1
+        b();             // 函数声明
+        var b = function(){
+            console.log('函数表达式');
+        }
+        function b(){    
+            console.log('函数声明')
+        }
+        b();             // 函数表达式
+        var d = 4;
+    }
+    fn(true);
+    const GG = 111111111
+    let BB = 222222222
+    // debugger;
+    // console.log(GLOBAL)
     // 作用域 AO & GO
   </script>
 
