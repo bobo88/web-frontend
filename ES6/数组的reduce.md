@@ -56,8 +56,8 @@ let newArr = arr2.reduce((prev, cur) => {
 }, [])
 console.log('数组去重: ', newArr)
 
-let arr3 = [1, 2, 3, [4, 5], [6, 7], [8, 9, [10]]]
 // 将多维数组转为一维数组
+let arr3 = [1, 2, 3, [4, 5], [6, 7], [8, 9, [10]]]
 let flatArr = function(arr) {
     return arr.reduce((prev, cur) => {
         return prev.concat(Array.isArray(cur) ? flatArr(cur) : cur)
