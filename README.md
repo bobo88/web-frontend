@@ -4,19 +4,19 @@
 3. 暂时就这样......
 
 ### 一、版块划分
-* [常见技术点](https://github.com/bobo88/web-front/tree/main/%E5%B8%B8%E8%A7%81%E6%8A%80%E6%9C%AF%E7%82%B9)
-* [技术思维导图](https://github.com/bobo88/web-front/tree/main/%E6%8A%80%E6%9C%AF%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE)
-* [设计模式](https://github.com/bobo88/web-front/tree/main/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
-* [ES6](https://github.com/bobo88/web-front/tree/main/ES6)
-* [HTML & CSS](https://github.com/bobo88/web-front/tree/main/HTML%20%26%20CSS)
-* [React](https://github.com/bobo88/web-front/tree/main/react)
-* [Vue](https://github.com/bobo88/web-front/tree/main/vue)
+- [常见技术点](https://github.com/bobo88/web-front/tree/main/%E5%B8%B8%E8%A7%81%E6%8A%80%E6%9C%AF%E7%82%B9)
+- [技术思维导图](https://github.com/bobo88/web-front/tree/main/%E6%8A%80%E6%9C%AF%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE)
+- [设计模式](https://github.com/bobo88/web-front/tree/main/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
+- [ES6](https://github.com/bobo88/web-front/tree/main/ES6)
+- [HTML & CSS](https://github.com/bobo88/web-front/tree/main/HTML%20%26%20CSS)
+- [React](https://github.com/bobo88/web-front/tree/main/react)
+- [Vue](https://github.com/bobo88/web-front/tree/main/vue)
 
 ### 二、书籍阅读
-* [你不知道的JavaScript - 上卷]()
-* [你不知道的JavaScript - 中卷]()
-* [你不知道的JavaScript - 下卷]()
+- [你不知道的JavaScript - 上卷]()
+- [你不知道的JavaScript - 中卷]()
+- [你不知道的JavaScript - 下卷]()
 
 ### 三、随笔
-* [前端开发的成长之路]()
+- [前端开发的成长之路]()
 
