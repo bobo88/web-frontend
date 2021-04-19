@@ -9,34 +9,46 @@
 
 <body>
     <script>
-        let res11 = !1     // false
-        let res12 = !0     // true
-        let res13 = !'A'   // false
-        let res14 = !null  // true
-        let res15 = !{}    // false
-        console.log('res11-15:', res11, res12, res13, res14, res15) // false, true, false, true, false
+        // let res11 = !1     // false
+        // let res12 = !0     // true
+        // let res13 = !'A'   // false
+        // let res14 = !null  // true
+        // let res15 = !{}    // false
+        // console.log('res11-15:', res11, res12, res13, res14, res15) // false, true, false, true, false
 
-        let res16 = {}
-        console.log('res16 == true得到的值为: ', res16 == true)      // false
-        console.log('res16 === true得到的值为: ', res16 === true)    // false
-        console.log('res16 == false得到的值为: ', res16 == false)    // false
-        console.log('res16 === false得到的值为: ', res16 === false)  // false
-        console.log('取反操作1: ', !res16 == false)   // true
-        console.log('取反操作2: ', !res16 === false)  // true
-        console.log('取反操作3: ', !!res16 == true)   // true
-        console.log('取反操作4: ', !!res16 === true)  // true
-        // 结论：
-        //    - 空对象{}，比较特殊，不管用 `==` 还是 `===`，它既不等于 `true`，也不等于 `false`
-        //    - 更深层次的原因是：任意值与布尔值比较，都会将两边的值转化为Number。
-        //    - 而空对象{}转化为NaN，由于NaN与任何数都不相等
+        // let res16 = {}
+        // console.log('res16 == true得到的值为: ', res16 == true)      // false
+        // console.log('res16 === true得到的值为: ', res16 === true)    // false
+        // console.log('res16 == false得到的值为: ', res16 == false)    // false
+        // console.log('res16 === false得到的值为: ', res16 === false)  // false
+        // console.log('取反操作1: ', !res16 == false)   // true
+        // console.log('取反操作2: ', !res16 === false)  // true
+        // console.log('取反操作3: ', !!res16 == true)   // true
+        // console.log('取反操作4: ', !!res16 === true)  // true
+        // // 结论：
+        // //    - 空对象{}，比较特殊，不管用 `==` 还是 `===`，它既不等于 `true`，也不等于 `false`
+        // //    - 更深层次的原因是：任意值与布尔值比较，都会将两边的值转化为Number。
+        // //    - 而空对象{}转化为NaN，由于NaN与任何数都不相等
 
-        let res17 = 1
-        console.log('res17 == true得到的值为: ', res17 == true)   // true
-        console.log('res17 === true得到的值为: ', res17 === true) // false
-        console.log('!!res17 === true得到的值为: ', !!res17 === true) // true
-        //结论：
-        //    - 任意值与布尔值比较，都会将两边的值转化为Number
-        //    - `!!` 可以将 数值型 的res17 转换为 真正的 布尔型
+        // let res17 = 1
+        // console.log('res17 == true得到的值为: ', res17 == true)   // true
+        // console.log('res17 === true得到的值为: ', res17 === true) // false
+        // console.log('!!res17 === true得到的值为: ', !!res17 === true) // true
+        // //结论：
+        // //    - 任意值与布尔值比较，都会将两边的值转化为Number
+        // //    - `!!` 可以将 数值型 的res17 转换为 真正的 布尔型
+
+        // let res18 = null
+        // console.log(res18 > 0)
+        // console.log(res18 == 0)
+        // console.log(res18 >= 0)
+        
+        if (!!{} == true) {
+            console.log(123)
+        }
+        // if (null) {
+        //     console.log(234)
+        // }
 
     </script>
 </body>
