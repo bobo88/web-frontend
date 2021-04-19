@@ -11,14 +11,9 @@
 - [HTML & CSS](https://github.com/bobo88/web-front/tree/main/HTML%20%26%20CSS)
 - [React](https://github.com/bobo88/web-front/tree/main/react)
 - [Vue](https://github.com/bobo88/web-front/tree/main/vue)
+- [Books（书籍阅读）](https://github.com/bobo88/web-front/tree/main/books)
 
-### 二、书籍阅读
-- [你不知道的JavaScript - 上卷]()
-- [你不知道的JavaScript - 中卷]()
-- [你不知道的JavaScript - 下卷]()
-- [ECMAScript 6 入门]()
-
-### 三、随笔
+### 二、随笔
 - [前端开发的成长之路]()
 
 ```
