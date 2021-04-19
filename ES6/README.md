@@ -1,9 +1,9 @@
 # 关于JavaScript相关的，不止是ES6等
 
 ### 一、数组Array
-- [数组去重](https://github.com/bobo88/web-front/blob/main/ES6/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D.md)
-- [数组的reduce](https://github.com/bobo88/web-frontend/blob/main/ES6/%E6%95%B0%E7%BB%84%E7%9A%84reduce.md)
-- [找出数组中最大值的几种方法](https://github.com/bobo88/web-frontend/blob/main/ES6/%E6%89%BE%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9C%80%E5%A4%A7%E5%80%BC%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95.md)
+- [数组去重 -- OK](https://github.com/bobo88/web-front/blob/main/ES6/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D.md)
+- [数组的reduce -- OK](https://github.com/bobo88/web-frontend/blob/main/ES6/%E6%95%B0%E7%BB%84%E7%9A%84reduce.md)
+- [找出数组中最大值的几种方法 -- OK](https://github.com/bobo88/web-frontend/blob/main/ES6/%E6%89%BE%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9C%80%E5%A4%A7%E5%80%BC%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95.md)
 - 
 
 ### 二、函数Function
