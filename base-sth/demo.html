@@ -9,60 +9,34 @@
 
 <body>
     <script>
+        let res11 = !1     // false
+        let res12 = !0     // true
+        let res13 = !'A'   // false
+        let res14 = !null  // true
+        let res15 = !{}    // false
+        console.log('res11-15:', res11, res12, res13, res14, res15) // false, true, false, true, false
 
-        // 找出数组中最大值的几种方法
-        // 原数组
-        const originArr = [1, 2, 3, 5, 100, -100, 100, 20, 50, 60, 12, 99]
+        let res16 = {}
+        console.log('res16 == true得到的值为: ', res16 == true)      // false
+        console.log('res16 === true得到的值为: ', res16 === true)    // false
+        console.log('res16 == false得到的值为: ', res16 == false)    // false
+        console.log('res16 === false得到的值为: ', res16 === false)  // false
+        console.log('取反操作1: ', !res16 == false)   // true
+        console.log('取反操作2: ', !res16 === false)  // true
+        console.log('取反操作3: ', !!res16 == true)   // true
+        console.log('取反操作4: ', !!res16 === true)  // true
+        // 结论：
+        //    - 空对象{}，比较特殊，不管用 `==` 还是 `===`，它既不等于 `true`，也不等于 `false`
+        //    - 更深层次的原因是：任意值与布尔值比较，都会将两边的值转化为Number。
+        //    - 而空对象{}转化为NaN，由于NaN与任何数都不相等
 
-        // 方法一：利用reduce
-        let getMax1 = originArr.reduce((prev, cur) => {
-            if (prev > cur) {
-                return prev
-            } else {
-                return cur
-            }
-        })
-        console.log('getMax1:', getMax1)
-
-        // 方法二：利用sort（a-b排序从小到大，b-a排序从大到小）
-        let getMax2 = originArr.sort((a, b) => b - a)[0]
-        console.log('getMax2:', getMax2)
-
-        // 方法三：利用Math.max
-        let getMax3 = Math.max(...originArr)
-        console.log('getMax3:', getMax3)
-
-        // 方法四：普通的for循环
-        let getMax4 = originArr[0]
-        for(let i = 0; i < originArr.length; i++) {
-            (originArr[i] > getMax4) ? getMax4 = originArr[i] : ''
-        }
-        console.log('getMax4:', getMax4)
-
-        // 方法五：ES5的apply
-        let getMax5 = Math.max.apply(null, originArr)
-        console.log('getMax5:', getMax5)
-        
-        // 方法六：利用数组的flat方法
-        let getMax6 = originArr.flat()[0]
-        console.log('getMax6:', getMax6)
-
-        // 方法七：利用filter / forEach / map，原理与for类似
-        let getMax7 = originArr[0]
-        // filter:
-        originArr.filter(i => {
-            i > getMax7 ? getMax7 = i : ''
-        })
-        // map:
-        // originArr.map(i => {
-        //     i > getMax7 ? getMax7 = i : ''
-        // })
-        // forEach:
-        // originArr.forEach(i => {
-        //     i > getMax7 ? getMax7 = i : ''
-        // })
-        console.log('getMax7:', getMax7)
-
+        let res17 = 1
+        console.log('res17 == true得到的值为: ', res17 == true)   // true
+        console.log('res17 === true得到的值为: ', res17 === true) // false
+        console.log('!!res17 === true得到的值为: ', !!res17 === true) // true
+        //结论：
+        //    - 任意值与布尔值比较，都会将两边的值转化为Number
+        //    - `!!` 可以将 数值型 的res17 转换为 真正的 布尔型
 
     </script>
 </body>
