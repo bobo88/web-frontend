@@ -16,6 +16,7 @@
 - [你不知道的JavaScript - 上卷]()
 - [你不知道的JavaScript - 中卷]()
 - [你不知道的JavaScript - 下卷]()
+- [ECMAScript 6 入门]()
 
 ### 三、随笔
 - [前端开发的成长之路]()
