@@ -13,43 +13,36 @@
         console.log('import methods: name -->', name)
     </script>
     <script>
-        // 声明变量的方法
-        
-        // 1、var
-        var a = 1
-        console.log('var: ', a)    // var: 1
-        
-        // 2、function
-        function b() {
-            console.log(123)
-        }
-        console.log('function: ', b)    // function: function b() {console.log(123)}
-        
-        // 3、let
-        let c = 2
-        console.log('let: ', c)    // let: 2
-        
-        // 4、const
-        const d = 3
-        console.log('const: ', d)
-        
-        // 5、import
-        // import { random } from Math
-        // console.log(random)
-        
+        // 测试用的字符串
+        let str = '12Abc34'
+        let str2 = ' 12Abc34 '
+        // console.log(str.padStart(9, 'X'), str.padEnd(9, 'Y'), str.repeat(2))  // A 12Abc3412Abc34
+        // let regx = /[A-Z]/g
+        // console.log(str.match(regx))            // ["A"]
+        // console.log(str.matchAll(regx))         // RegExpStringIterator {}
+        // console.log(str.replace(/\d/g, '*'))    // **Abc**
+        // console.log(str.replaceAll(/\d/g, '*'))    // **Abc**
+        // console.log('12AAAbc34'.replaceAll('A', '*'))    // **Abc**
+        // console.log(str.search('A'))    // 2
 
-        // 6、class
-        class Person {
-            constructor(name, age) {
-                this.name = name
-                this.age = age
-            }
-            sayHello() {
-                console.log(`class: Hello, ${this.name}`)
-            }
-        }
-        let person1 = new Person('Bob', 25)
-        person1.sayHello()
+        // console.log(str.concat('x', 'y', 'z'))
+        // console.info(str.split(''))   // 12Abc34xyz
+        // console.log(str.slice(2, 5))
+        // console.log(str.substring(2, 5)) 
+        // console.log(str.substr(2, 3))
+
+        // console.log('12AAAbc34'.indexOf('A'))            // 2
+        // console.log('12AAAbc34'.lastIndexOf('A'))        // 4
+        // console.log(str.includes('A'))                   // true
+        // console.log(str.startsWith('A', 2))              // true
+        // console.log(str.endsWith('A'))                   // false
+        // console.log(str.endsWith('A', 3))                // true
+
+        console.log(str.toLowerCase())
+        console.log(str.toUpperCase())
+        console.log(str2.trim())
+        console.log(str2.trimEnd())
+        console.log(str2.trimStart())  
     </script>
 </body>
 

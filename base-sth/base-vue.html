@@ -15,15 +15,22 @@
 
 <body>
 
-  <div id="app"></div>
+  <div id="app">
+    <button @click="changeMsg">{{ xxx }}</button>
+  </div>
   <script>
     var app = new Vue({
       el: '#app',
       data: {
-        xxx: ''
+        xxx: '123'
       },
       methods: {
-        // xxx
+        changeMsg() {
+          this.xxx = 'change....'
+          this.$nextTick(() => {
+            console.log(234)
+          })
+        }
       }
     })
   </script>
