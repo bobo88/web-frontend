@@ -13,36 +13,39 @@
         console.log('import methods: name -->', name)
     </script>
     <script>
-        // 测试用的字符串
-        let str = '12Abc34'
-        let str2 = ' 12Abc34 '
-        // console.log(str.padStart(9, 'X'), str.padEnd(9, 'Y'), str.repeat(2))  // A 12Abc3412Abc34
-        // let regx = /[A-Z]/g
-        // console.log(str.match(regx))            // ["A"]
-        // console.log(str.matchAll(regx))         // RegExpStringIterator {}
-        // console.log(str.replace(/\d/g, '*'))    // **Abc**
-        // console.log(str.replaceAll(/\d/g, '*'))    // **Abc**
-        // console.log('12AAAbc34'.replaceAll('A', '*'))    // **Abc**
-        // console.log(str.search('A'))    // 2
-
-        // console.log(str.concat('x', 'y', 'z'))
-        // console.info(str.split(''))   // 12Abc34xyz
-        // console.log(str.slice(2, 5))
-        // console.log(str.substring(2, 5)) 
-        // console.log(str.substr(2, 3))
-
-        // console.log('12AAAbc34'.indexOf('A'))            // 2
-        // console.log('12AAAbc34'.lastIndexOf('A'))        // 4
-        // console.log(str.includes('A'))                   // true
-        // console.log(str.startsWith('A', 2))              // true
-        // console.log(str.endsWith('A'))                   // false
-        // console.log(str.endsWith('A', 3))                // true
-
-        console.log(str.toLowerCase())
-        console.log(str.toUpperCase())
-        console.log(str2.trim())
-        console.log(str2.trimEnd())
-        console.log(str2.trimStart())  
+        // 将字符串型转换为数值型
+        let str = '123'
+        let str2 = '123R'
+        let str3 = 'R123'
+        let str4 = 'Infinity'
+        // 引申到布尔值 和 null等
+        let bool = true
+        let nullObj = null
+        let num = '1e3'
+        // 方式一： Number(str)
+        console.log(Number(str))       // 123
+        console.log(Number(str2))      // NaN
+        console.log(Number(str3))      // NaN
+        console.log(Number(str4))      // Infinity
+        console.log(Number(bool))      // 1
+        console.log(Number(nullObj))   // 0
+        console.log(Number(num))   // 0
+        // 方式二： +str
+        console.log(+str)              // 123
+        console.log(+str2)             // NaN
+        console.log(+str3)             // NaN
+        console.log(+str4)             // Infinity
+        console.log(+bool)             // 1
+        console.log(+nullObj)          // 0
+        console.log(+num)          // 0
+        // 方式三： parseInt(str)
+        console.log(parseInt(str))     // 123
+        console.log(parseInt(str2))    // 123
+        console.log(parseInt(str3))    // 123
+        console.log(parseInt(str4))    // NaN
+        console.log(parseInt(bool))    // NaN
+        console.log(parseInt(nullObj)) // NaN
+        console.log(parseInt(num)) // NaN
     </script>
 </body>
 
