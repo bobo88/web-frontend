@@ -9,43 +9,65 @@
 
 <body>
     <script type="module">
-        import { name } from '../books/ECMAScript 6 入门/demoForImport.js'
-        console.log('import methods: name -->', name)
+        // import { name } from '../books/ECMAScript 6 入门/demoForImport.js'
+        // console.log('import methods: name -->', name)
     </script>
     <script>
-        // 将字符串型转换为数值型
-        let str = '123'
-        let str2 = '123R'
-        let str3 = 'R123'
-        let str4 = 'Infinity'
-        // 引申到布尔值 和 null等
-        let bool = true
-        let nullObj = null
-        let num = '1e3'
-        // 方式一： Number(str)
-        console.log(Number(str))       // 123
-        console.log(Number(str2))      // NaN
-        console.log(Number(str3))      // NaN
-        console.log(Number(str4))      // Infinity
-        console.log(Number(bool))      // 1
-        console.log(Number(nullObj))   // 0
-        console.log(Number(num))   // 0
-        // 方式二： +str
-        console.log(+str)              // 123
-        console.log(+str2)             // NaN
-        console.log(+str3)             // NaN
-        console.log(+str4)             // Infinity
-        console.log(+bool)             // 1
-        console.log(+nullObj)          // 0
-        console.log(+num)          // 0
-        // 方式三： parseInt(str)
-        console.log(parseInt(str))     // 123
-        console.log(parseInt(str2))    // 123
-        console.log(parseInt(str3))    // 123
-        console.log(parseInt(str4))    // NaN
-        console.log(parseInt(bool))    // NaN
-        console.log(parseInt(nullObj)) // NaN
-        console.log(parseInt(num)) // NaN
+        // 队列结构封装 - 先进先出（FIFO： first in first out）
+        function Queue() {
+            this.queueList = []
+        }
+        Queue.prototype.inQueue = function (item) {
+            this.queueList.push(item)
+        }
+        Queue.prototype.outQueue = function () {
+            return this.queueList.shift()
+        }
+        Queue.prototype.getQueueSize = function () {
+            return this.queueList.length
+        }
+        Queue.prototype.isEmptyQueue = function () {
+            return this.queueList.length === 0
+        }
+        Queue.prototype.toString = function () {
+            let res = ''
+            for (let i = 0; i < this.queueList.length; i++) {
+                res += this.queueList[i] + ' '
+            }
+            return res
+        }
+
+        /**
+ * 游戏名称： 击鼓传花
+ * 游戏规则：
+ * 1、几个朋友一起玩一个游戏，围成一圈，开始数数，数到某个数字的人自动淘汰；
+ * 2、最后剩下的这个人会获得胜利，请问最后剩下的这个人是哪个位置上的？
+*/
+        function passGame(list, num) {
+            let res = ''
+            let queueObj = new Queue()
+            // 1、将人数插入队列中
+            for (let i = 0; i < list.length; i++) {
+                queueObj.inQueue(list[i])
+            }
+            // console.log(queueObj.queueList)
+            // 2、数数，淘汰人（当参与游戏的人数还大于1的时候，游戏继续）
+            while (queueObj.getQueueSize() > 1) {
+                // 2.1 num之前的人，重新插入队列中
+                for (let i = 0; i < num - 1; i++) {
+                    queueObj.inQueue(queueObj.outQueue())
+                }
+                // 2.2 当 num 对应这个人时，这个人直接淘汰
+                queueObj.outQueue()
+            }
+            return {
+                lastName: queueObj.queueList[0]
+            }
+        }
+        let playPersons = ['小明', '小花', '小红', '小王', '小李', '小袁']
+        // playPersons: 玩游戏的人， 3: 数到数字3就自动淘汰
+        let play = new passGame(playPersons, 3)
+        console.log(play.lastName)    // 小明
     </script>
 </body>
 
