@@ -12,7 +12,7 @@
 
 ### 三、字符串String
 - [详解字符串String中的常见方法]()
-- [如何将字符串型转换为数值型？]
+- [如何将字符串型转换为数值型？ -- OK](https://github.com/bobo88/web-frontend/blob/main/ES6/%E5%A6%82%E4%BD%95%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%95%B0%E5%80%BC%E5%9E%8B.md)
 
 ### 四、（逻辑）运算符
 - ['&&'、'||'、'!'的常见用法 -- OK](https://github.com/bobo88/web-frontend/blob/main/ES6/'%26%26'%E3%80%81'%7C%7C'%E3%80%81'!'%E7%9A%84%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95.md)
