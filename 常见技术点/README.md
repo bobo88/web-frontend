@@ -13,6 +13,6 @@
 - [常见的前端性能优化]()
 
 ### 二、高阶
-- [浏览器的工作原理](https://github.com/bobo88/web-frontend/blob/main/%E5%B8%B8%E8%A7%81%E6%8A%80%E6%9C%AF%E7%82%B9/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.md)
+- [浏览器的工作原理 -- OK](https://github.com/bobo88/web-frontend/blob/main/%E5%B8%B8%E8%A7%81%E6%8A%80%E6%9C%AF%E7%82%B9/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.md)
 - [简析函数柯里化]()
 
