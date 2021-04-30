@@ -1,0 +1,9 @@
+{
+    // compilerOptions编译器的选项
+    "compilerOptions": {
+        // target 用来指定TS被编译为ES的版本
+        "target": "es2015",
+        "module": "es2015",
+        "strict": true
+    }
+}
