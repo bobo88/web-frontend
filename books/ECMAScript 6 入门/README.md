@@ -5,5 +5,6 @@
 - [函数的扩展 -- OK](https://github.com/bobo88/web-frontend/blob/main/books/ECMAScript%206%20%E5%85%A5%E9%97%A8/%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A9%E5%B1%95.md)
 - [数组的扩展 -- OK](https://github.com/bobo88/web-frontend/blob/main/books/ECMAScript%206%20%E5%85%A5%E9%97%A8/%E6%95%B0%E7%BB%84%E7%9A%84%E6%89%A9%E5%B1%95.md)
 - [对象的扩展 -- OK](https://github.com/bobo88/web-frontend/blob/main/books/ECMAScript%206%20%E5%85%A5%E9%97%A8/%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%89%A9%E5%B1%95.md)
+- [对象的新增方法 -- OK]()
 - [xxxx]()
 
