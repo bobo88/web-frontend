@@ -1,8 +1,7 @@
 # 关于 TypeScript
 
 ### 一、基础知识
-- [TypeScript -- 组件]()
-- [TypeScript -- 插件]()
+- [TypeScript简介]()
 - 
 
 ### 二、高级应用
