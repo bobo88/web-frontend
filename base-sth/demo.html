@@ -13,61 +13,64 @@
         // console.log('import methods: name -->', name)
     </script>
     <script>
-        // 队列结构封装 - 先进先出（FIFO： first in first out）
-        function Queue() {
-            this.queueList = []
-        }
-        Queue.prototype.inQueue = function (item) {
+        PriorityQueue.prototype.inQueue = function (item) {
             this.queueList.push(item)
         }
-        Queue.prototype.outQueue = function () {
+        PriorityQueue.prototype.outQueue = function () {
             return this.queueList.shift()
         }
-        Queue.prototype.getQueueSize = function () {
+        PriorityQueue.prototype.getQueueSize = function () {
             return this.queueList.length
         }
-        Queue.prototype.isEmptyQueue = function () {
+        PriorityQueue.prototype.isEmptyQueue = function () {
             return this.queueList.length === 0
         }
-        Queue.prototype.toString = function () {
-            let res = ''
-            for (let i = 0; i < this.queueList.length; i++) {
-                res += this.queueList[i] + ' '
-            }
-            return res
+        
+        // 优先级队列
+        function PriorityQueue() {
+            this.queueList = [];
         }
-
-        /**
- * 游戏名称： 击鼓传花
- * 游戏规则：
- * 1、几个朋友一起玩一个游戏，围成一圈，开始数数，数到某个数字的人自动淘汰；
- * 2、最后剩下的这个人会获得胜利，请问最后剩下的这个人是哪个位置上的？
-*/
-        function passGame(list, num) {
-            let res = ''
-            let queueObj = new Queue()
-            // 1、将人数插入队列中
-            for (let i = 0; i < list.length; i++) {
-                queueObj.inQueue(list[i])
+        PriorityQueue.prototype.insert = function(name, sort) {
+            let listLen = this.queueList.length;
+            let added = false;
+            if (listLen === 0) {
+                this.queueList.push({
+                    name: name,
+                    sort: sort
+                })
+                return;
             }
-            // console.log(queueObj.queueList)
-            // 2、数数，淘汰人（当参与游戏的人数还大于1的时候，游戏继续）
-            while (queueObj.getQueueSize() > 1) {
-                // 2.1 num之前的人，重新插入队列中
-                for (let i = 0; i < num - 1; i++) {
-                    queueObj.inQueue(queueObj.outQueue())
+            for(let i = 0; i < listLen; i++) {
+                // console.log('sort', sort, this.queueList[i].sort)
+                if (sort < this.queueList[i].sort) {
+                    this.queueList.splice(i, 0, {
+                        name: name,
+                        sort: sort
+                    })
+                    added = true;
+                    break;
                 }
-                // 2.2 当 num 对应这个人时，这个人直接淘汰
-                queueObj.outQueue()
             }
-            return {
-                lastName: queueObj.queueList[0]
+            if (!added) {
+                this.queueList.push({
+                    name: name,
+                    sort: sort
+                })
             }
         }
-        let playPersons = ['小明', '小花', '小红', '小王', '小李', '小袁']
-        // playPersons: 玩游戏的人， 3: 数到数字3就自动淘汰
-        let play = new passGame(playPersons, 3)
-        console.log(play.lastName)    // 小明
+        
+        PriorityQueue.prototype.toString = function () {
+            let formatArr = this.queueList.map(i => {
+                return i.name + ':' + i.sort
+            })
+            return formatArr.join(', ')
+        }
+        let pq = new PriorityQueue()
+        pq.insert('a', 3)
+        pq.insert('b', 2)
+        pq.insert('c', 5)
+        pq.insert('d', 1)
+        console.log(pq.toString())
     </script>
 </body>
 
